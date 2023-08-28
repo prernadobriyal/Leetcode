@@ -62,32 +62,23 @@ class Remove_Duplicate_From_LL
 // } Driver Code Ends
 
 
-/*
-class Node
-    {
-        int data;
-        Node next;
-        Node(int d) {data = d; next = null; }
-    }
-*/
 
 class GfG
 {
     //Function to remove duplicates from sorted linked list.
     Node removeDuplicates(Node head)
     {
-	// Your code here	
-	    Node p = head;
-	    while(p.next != null){
-	        if (p.data == p.next.data){
-	           p.next = p.next.next;
-	           //System.out.println(p.data + " -> " + p.next.data);
+	// Your code here
+	    Node temp = head;
+	    while(temp != null){
+	        Node curtemp = temp;
+	        int prevdata = temp.data;
+	        while(curtemp != null && curtemp.data == prevdata){
+	            curtemp=curtemp.next;
 	        }
-	        else{
-	            p = p.next;
-	        }
+	        temp.next = curtemp;
+	        temp = temp.next;
 	    }
 	    return head;
-	
     }
 }
