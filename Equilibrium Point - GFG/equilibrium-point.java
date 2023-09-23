@@ -37,18 +37,26 @@ class Solution {
     // a: input array
     // n: size of array
     // Function to find equilibrium point in the array.
-    public static int equilibriumPoint(long arr[], int n) {
-        int leftSum = 0,totalSum = 0;
-        for(int i = 0;i<n;i++){
-            totalSum+=arr[i];
+ public static int equilibriumPoint(long arr[], int n) {        
+        
+        long ts = 0;
+        long ls = 0;
+         
+
+        // loop for totalsum
+        for(int i = 0;i<arr.length;i++){
+            ts +=arr[i]; 
         }
-        for(int i = 0; i<n;i++){
-            if(leftSum==(totalSum-arr[i])){
-                return i+1;
-            }
-            leftSum += arr[i];
-            totalSum -= arr[i];
+        
+
+         // loop for checking condition and calculating leftsum.
+        for(int i = 0;i<arr.length;i++){
+          if(ls==ts-ls-arr[i]){
+              return i+1;
+          }
+            ls+=arr[i];
         }
-        return -1;
+        
+     return -1;   
     }
 }
