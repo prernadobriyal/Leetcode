@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Database
 |  |
 | ------- |
+| [0178-rank-scores](https://github.com/prernadobriyal/Leetcode/tree/master/0178-rank-scores) |
 | [0197-rising-temperature](https://github.com/prernadobriyal/Leetcode/tree/master/0197-rising-temperature) |
 | [0570-managers-with-at-least-5-direct-reports](https://github.com/prernadobriyal/Leetcode/tree/master/0570-managers-with-at-least-5-direct-reports) |
 | [0577-employee-bonus](https://github.com/prernadobriyal/Leetcode/tree/master/0577-employee-bonus) |
